@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="api_execicio.MainPage">
+
+    <ContentPage.Resources>
+        <Style TargetType="Label" >
+            <Setter Property="FontSize" Value="20" />
+            <Setter Property="FontAttributes" Value="Bold"></Setter>
+            <Setter Property="HorizontalOptions" Value="Center"></Setter>
+            <Setter Property="BackgroundColor" Value="Aqua"></Setter>
+            <Setter Property="TextColor" Value="Red"></Setter>
+            
+        </Style>
+    </ContentPage.Resources>
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+           
+            
+            <Label Text="tipo"/>
+            <Picker x:Name="pk1" Title="selecione o veiculo" HorizontalOptions="Center"
+                    
+                    SelectedIndexChanged="seltipo">
+                <!--<Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String >carro</x:String>
+                        <x:String>moto</x:String>
+                        <x:String>caminhao</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>--> 
+            </Picker>
+
+            <Label Text="fabricante"/>
+            <Picker x:Name="pkfab" Title="selecione o fabricante" 
+              SelectedIndexChanged="selfabri"       HorizontalOptions="Center">
+
+            </Picker>
+
+            <Label Text="modelo"/>
+            <Picker x:Name="pkmod" Title="selecione o modelo" 
+                    HorizontalOptions="Center"
+                    
+                    SelectedIndexChanged="selano"
+                    >
+
+            </Picker>
+
+            <Label Text="ano"/>
+            <Picker x:Name="pkano" Title="selecione o ano" HorizontalOptions="Center"
+                    SelectedIndexChanged="sel_ano_pesqui"/>
+
+
+
+            <Button
+                x:Name="Btn"
+                Text="pesquisa"
+                
+                Clicked="garg_dados"
+                HorizontalOptions="Center" />
+
+            <Label Text="preco" x:Name="lbpreco" HorizontalOptions="Center"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
